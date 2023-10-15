@@ -7,6 +7,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -186,11 +187,23 @@ fun LoginPage(
             Spacer(
                 modifier = Modifier.height(10.dp)
             )
-            Button(
-                onClick = { /*TODO*/ },
-                colors = ButtonDefaults.buttonColors(containerColor = colorResource(id = R.color.blue)),
-            ) {
-                Text(text = "Login Now")
+            Row {
+                Button(
+                    onClick = {},
+                    colors = ButtonDefaults.buttonColors(containerColor = colorResource(id = R.color.blue)),
+                    modifier = Modifier
+                        .width(120.dp)
+                ) {
+                    Text(text = "Sign In")
+                }
+                Spacer(modifier = Modifier.width(10.dp))
+                Button(
+                    onClick = {},
+                    colors = ButtonDefaults.buttonColors(containerColor = colorResource(id = R.color.blue)),
+                    modifier = Modifier.width(120.dp)
+                ) {
+                    Text(text = "Sign Up")
+                }
             }
             Text(
                 text = "Forgot password?",
